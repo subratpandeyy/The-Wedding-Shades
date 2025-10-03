@@ -29,7 +29,7 @@ const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
+      className={`fixed top-4 left-4 right-4 z-50 transition-smooth rounded-3xl ${
         isScrolled 
           ? 'bg-card/95 backdrop-blur-md shadow-soft' 
           : 'bg-transparent'
@@ -39,9 +39,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-2xl font-bold text-primary transition-smooth hover:scale-105"
+            className="font-corinthia text-4xl font-bold text-primary"
           >
-            Kala Studios
+            The Wedding Shades
           </button>
 
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
+                className="text-secondary/60 hover:text-primary transition-smooth font-medium"
               >
                 {link.name}
               </button>

@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
       name: "Priya & Rahul Sharma",
       role: "Wedding Clients",
-      content: "Kala Studios captured our wedding with such elegance and cultural sensitivity. Every ritual, every emotion was preserved beautifully. The team understood our vision perfectly and delivered beyond expectations.",
+      content: "The Wedding Shades captured our wedding with such elegance and cultural sensitivity. Every ritual, every emotion was preserved beautifully. The team understood our vision perfectly and delivered beyond expectations.",
       rating: 5
     },
     {
@@ -28,10 +28,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Client <span className="text-gradient-gold">Testimonials</span>
+            Client <span className="text-gradient-gold font-corinthia text-6xl">Testimonials</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Hear from our satisfied clients about their experience with Kala Studios.
+            Hear from our satisfied clients about their experience with The Wedding Shades.
           </p>
         </div>
 

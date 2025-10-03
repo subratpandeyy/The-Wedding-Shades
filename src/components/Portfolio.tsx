@@ -36,7 +36,7 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-gradient-gold">Portfolio</span>
+            Our <span className="text-gradient-gold font-corinthia text-6xl">Portfolio</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Explore our collection of visual stories, crafted with passion and precision.

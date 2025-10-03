@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Kala Studios</h3>
+            <h3 className="text-2xl font-bold mb-4">The Wedding Shades</h3>
             <p className="opacity-90 leading-relaxed">
               Capturing life's precious moments with artistry, cultural authenticity, and timeless elegance.
             </p>
@@ -38,7 +38,7 @@ const Footer = () => {
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="opacity-90 flex items-center justify-center gap-2">
-            Crafted with <Heart className="w-4 h-4 fill-current" /> by Kala Studios © 2024
+            Crafted with <Heart className="w-4 h-4 fill-current" /> by The Wedding Shades © 2024
           </p>
           <button 
             onClick={scrollToTop}

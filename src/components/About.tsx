@@ -24,10 +24,10 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About <span className="text-gradient-gold">Kala Studios</span>
+            About <span className="text-gradient-gold font-corinthia text-6xl px-1">The Wedding Shades</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            At Kala Studios, we believe every photograph tells a story. Our passion is to capture the essence 
+            At The Wedding Shades, we believe every photograph tells a story. Our passion is to capture the essence 
             of your most cherished moments with artistic vision, cultural authenticity, and cinematic beauty. 
             From intimate portraits to grand celebrations, we craft visual narratives that last generations.
           </p>
