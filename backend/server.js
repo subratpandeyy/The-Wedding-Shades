@@ -11,13 +11,16 @@ dotenv.config();
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:5173", // Vite dev server
-  "https://theweddingshades.vercel.app/"
+  "https://theweddingshades.vercel.app",
+  "http://localhost:8080"
 ];
 
 app.use(cors({
   origin: allowedOrigins,
+  methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS"],
+  credentials: true,
 }));
+
 app.use(express.json());
 
 // Mongo db connect
