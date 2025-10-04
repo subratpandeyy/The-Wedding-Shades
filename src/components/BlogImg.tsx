@@ -10,7 +10,7 @@ export default function BlogImg() {
         imageUrl?: string;
       }
 
-    const API_BASE = "http://localhost:5000";
+    const API_BASE = "https://theweddingshades.onrender.com";
 
     const fetchPosts = async () => {
     const { data } = await axios.get<Post[]>(`${API_BASE}/posts`);

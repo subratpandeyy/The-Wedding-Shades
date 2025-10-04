@@ -9,7 +9,15 @@ import Post from "./models/Post.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = [
+  "http://localhost:5173", // Vite dev server
+  "https://theweddingshades.vercel.app/"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+}));
 app.use(express.json());
 
 // Mongo db connect
@@ -83,5 +91,6 @@ app.post("/posts", async (req, res) => {
     }
   });
   
+  const PORT = process.env.PORT || 5000;
 
-app.listen(5000, () => console.log("Backend running on http://localhost:5000"));
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
