@@ -50,7 +50,11 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-secondary/60 hover:text-primary transition-smooth font-medium"
+                className={`transition-smooth font-medium ${
+                    isScrolled
+                    ? 'text-secondary hover:text-primary'
+                    : 'text-white/70'
+                  }`}
               >
                 {link.name}
               </button>
@@ -59,9 +63,8 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <Button
-            variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden bg-transparent text-secondary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -76,7 +79,11 @@ const Navigation = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-foreground hover:text-primary transition-smooth font-medium text-left py-2"
+                  className={`text-foreground hover:text-primary transition-smooth font-medium text-left py-2 ${
+                    isScrolled
+                    ? 'text-gray-900'
+                    : 'text-white'
+                  }`}
                 >
                   {link.name}
                 </button>
