@@ -9,7 +9,7 @@ interface Post {
   category?: string;
 }
 
-const categories = ["Wedding", "Engagement", "Pre-wedding", "Reception", "Other"];
+const categories = ["Wedding", "Portraits", "Events", "Products"];
 
 export default function Blog() {
   const [title, setTitle] = useState("");
