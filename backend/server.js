@@ -69,12 +69,12 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 // api route
 app.post("/posts", async (req, res) => {
     try {
-      const { title, content, imageUrl } = req.body;
+      const { title, content, imageUrl, category } = req.body;
       if (!title || !content) {
         return res.status(400).json({ error: "Title and content are required" });
       }
   
-      const newPost = new Post({ title, content, imageUrl });
+      const newPost = new Post({ title, content, imageUrl, category });
       await newPost.save();
   
       res.json(newPost);

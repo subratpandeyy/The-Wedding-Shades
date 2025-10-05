@@ -6,13 +6,17 @@ interface Post {
   title: string;
   content: string;
   imageUrl?: string;
+  category?: string;
 }
+
+const categories = ["Wedding", "Engagement", "Pre-wedding", "Reception", "Other"];
 
 export default function Blog() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [posts, setPosts] = useState<Post[]>([]);
+  const [category, setCategory] = useState("");
 
   const API_BASE = "https://theweddingshades.onrender.com";
 
@@ -45,10 +49,11 @@ export default function Blog() {
         imageUrl = uploadRes.data.url;
       }
 
-      await axios.post(`${API_BASE}/posts`, { title, content, imageUrl });
+      await axios.post(`${API_BASE}/posts`, { title, content, imageUrl, category });
 
       setTitle("");
       setContent("");
+      setCategory("");
       setImage(null);
 
       fetchPosts();
@@ -76,6 +81,20 @@ export default function Blog() {
           className="border p-2 rounded"
           required
         />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="border p-2 rounded"
+          required
+        >
+          <option value="">Select Category</option>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+
         <input
           type="file"
           accept="image/*"
