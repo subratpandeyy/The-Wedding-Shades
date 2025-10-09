@@ -29,12 +29,13 @@ const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-4 left-4 right-4 z-50 transition-smooth rounded-3xl ${
-        isScrolled 
-          ? 'bg-card/95 backdrop-blur-md shadow-soft' 
-          : 'bg-transparent'
-      }`}
-    >
+  className={`items-center fixed left-0 right-0 z-50 mx-auto rounded-3xl transition-all duration-1000 ease-in-out
+    ${isScrolled 
+      ? 'bg-card/95 backdrop-blur-md shadow-soft max-w-[80%] mt-2 items-center' 
+      : 'bg-transparent max-w-[95%] mt-4'}
+  `}
+>
+
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button 
@@ -63,11 +64,16 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <Button
+            variant="ghost"
             size="icon"
-            className="md:hidden bg-transparent text-secondary"
+            className={`md:hidden bg-transparent text-secondary ${
+              isScrolled
+              ? 'text-black'
+              : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X className="text-black"/> : <Menu />}
           </Button>
         </div>
 
