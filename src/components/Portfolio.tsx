@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
+import { Camera } from "lucide-react";
 
-type Category = "all" | "wedding" | "portrait" | "event" | "product";
+// Use the actual categories from your blog form
+type Category = "all" | "Wedding" | "Portraits" | "Events" | "Products";
 
 interface PortfolioItem {
   _id: string;
@@ -19,12 +21,13 @@ const Portfolio = () => {
 
   const API_BASE = "https://theweddingshades.onrender.com";
 
+  // Match the categories from your blog form
   const categories = [
     { id: "all" as Category, label: "All Work" },
-    { id: "wedding" as Category, label: "Weddings" },
-    { id: "portrait" as Category, label: "Portraits" },
-    { id: "event" as Category, label: "Events" },
-    { id: "product" as Category, label: "Products" },
+    { id: "Wedding" as Category, label: "Weddings" },
+    { id: "Portraits" as Category, label: "Portraits" },
+    { id: "Events" as Category, label: "Events" },
+    { id: "Products" as Category, label: "Products" },
   ];
 
   // Fetch data
@@ -32,6 +35,7 @@ const Portfolio = () => {
     const fetchPortfolio = async () => {
       try {
         const { data } = await axios.get(`${API_BASE}/posts`);
+        console.log("Fetched categories:", [...new Set(data.map(item => item.category))]);
         setItems(data);
       } catch (err) {
         console.error("Failed to fetch portfolio:", err);
@@ -54,14 +58,19 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient-gold font-corinthia text-6xl">Portfolio</span>
+            Our <span className="text-gradient-gold font-corinthia text-6xl px-2">Portfolio</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Explore our collection of visual stories, crafted with passion and precision.
           </p>
         </div>
 
-        {/* Category Filter */}
+    {
+       !items || items.length === 0 
+       ? <p className="text-center py-20 flex flex-row justify-center gap-2 text-gray-700">The Gallery is Empty! <Camera /></p>
+       : 
+        /* Category Filter */
+        
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <Button
@@ -73,6 +82,7 @@ const Portfolio = () => {
             </Button>
           ))}
         </div>
+    }
 
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">

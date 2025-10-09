@@ -42,7 +42,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-gradient-gold font-corinthia text-6xl px-1">Services</span>
+            Our <span className="text-gradient-gold font-corinthia text-6xl px-2">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Tailored photography services that capture your vision with artistry, professionalism, and cultural authenticity.

@@ -25,7 +25,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Get in <span className="text-gradient-gold font-corinthia text-6xl px-1">Touch</span>
+            Get in <span className="text-gradient-gold font-corinthia text-6xl">Touch</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Ready to create timeless memories? Let's discuss your photography needs.
