@@ -37,12 +37,9 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="opacity-90 flex items-center justify-center gap-2">
-            Crafted with <Heart className="w-4 h-4 fill-current" /> by The Wedding Shades © 2024
-          </p>
           <button 
             onClick={scrollToTop}
-            className="mt-4 opacity-75 hover:opacity-100 transition-smooth text-sm"
+            className="mt-4 opacity-75 hover:opacity-100 transition-smooth text-sm p-4 bg-secondary text-primary rounded-sm"
           >
             Back to Top ↑
           </button>

@@ -5,31 +5,31 @@ import familyImage from "@/assets/family-portrait.jpg";
 import eventImage from "@/assets/event-dance.jpg";
 import productImage from "@/assets/product-jewelry.jpg";
 
+import wed from "@/assets/wed.jpg";
+import event from "@/assets/event.jpg";
+import portrait from "@/assets/portrait.jpg";
+
 const Services = () => {
   const services = [
     {
-      icon: Sparkles,
       title: "Wedding Photography",
       description: "Comprehensive coverage of your special day, from intimate rituals to grand celebrations, capturing every precious moment with cinematic storytelling.",
-      image: weddingImage,
+      image: wed,
       features: ["Pre-wedding shoots", "Full-day coverage", "Cinematic highlights", "Traditional rituals"]
     },
     {
-      icon: Users,
       title: "Portrait Sessions",
       description: "Professional portraits that capture personality and elegance, from individual headshots to multi-generational family treasures.",
-      image: familyImage,
+      image: portrait,
       features: ["Individual portraits", "Family sessions", "Professional headshots", "Studio & outdoor"]
     },
     {
-      icon: Calendar,
       title: "Event Coverage",
       description: "Dynamic photography for cultural events, festivals, and celebrations, preserving the energy and emotion of every occasion.",
-      image: eventImage,
+      image: event,
       features: ["Cultural festivals", "Corporate events", "Milestone celebrations", "Performances"]
     },
     {
-      icon: Package,
       title: "Product Photography",
       description: "Stunning commercial photography that elevates your brand, perfect for jewelry, fashion, and luxury goods with cultural appeal.",
       image: productImage,
@@ -64,9 +64,6 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end">
                   <div className="p-6 flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                      <service.icon className="w-6 h-6 text-secondary-foreground" />
-                    </div>
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                   </div>
                 </div>

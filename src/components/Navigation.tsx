@@ -30,8 +30,8 @@ const Navigation = () => {
   return (
     <nav 
   className={`items-center fixed left-0 right-0 z-50 mx-auto rounded-3xl transition-all duration-1000 ease-in-out
-    ${isScrolled 
-      ? 'bg-card/95 backdrop-blur-md shadow-soft max-w-[80%] mt-2 items-center' 
+    ${isScrolled
+      ? 'bg-card/95 backdrop-blur-md shadow-soft max-w-[80%] mt-4 items-center' 
       : 'bg-transparent max-w-[95%] mt-4'}
   `}
 >
@@ -41,6 +41,7 @@ const Navigation = () => {
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="font-corinthia text-4xl font-bold text-primary"
+            style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)' }}
           >
             The Wedding Shades
           </button>

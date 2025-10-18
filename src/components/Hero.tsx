@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-bride.jpg";
+import bgp from "@/assets/bgp.jpg"
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -12,7 +13,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${heroImage})`,
+          backgroundImage: `url(${bgp})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.4)',
@@ -36,14 +37,14 @@ const Hero = () => {
               View Our Work
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
+            {/* <Button 
               size="lg" 
               variant="outline" 
               className="border-2 border-white text-foreground hover:bg-white hover:text-primary px-8 py-6 text-lg transition-smooth"
               onClick={() => scrollToSection('contact')}
             >
               Get in Touch
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
