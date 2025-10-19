@@ -28,19 +28,22 @@ const Navigation = () => {
   ];
 
   return (
-    <nav 
-  className={`items-center fixed left-0 right-0 z-50 mx-auto rounded-3xl transition-all duration-1000 ease-in-out
+    <nav
+  className={`fixed left-0 right-0 z-50 mx-auto rounded-3xl
+    transition-[background-color,backdrop-filter,box-shadow,margin,max-width]
+    duration-700 ease-out
     ${isScrolled
-      ? 'bg-card/95 backdrop-blur-md shadow-soft max-w-[80%] mt-4 items-center' 
+      ? 'bg-card/95 backdrop-blur-md shadow-soft max-w-[80%] mt-4'
       : 'bg-transparent max-w-[95%] mt-4'}
   `}
 >
+
 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-corinthia text-4xl font-bold text-primary"
+            className="font-corinthia text-4xl lg:font-bold text-primary sm:font-light md:font-light"
             style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)' }}
           >
             The Wedding Shades
@@ -55,7 +58,7 @@ const Navigation = () => {
                 className={`transition-smooth font-medium ${
                     isScrolled
                     ? 'text-secondary hover:text-primary'
-                    : 'text-white/70'
+                    : 'text-white/70 hover:text-white'
                   }`}
               >
                 {link.name}

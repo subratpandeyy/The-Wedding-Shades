@@ -21,7 +21,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Phone, label: "Phone", value: "+91 98765 43210" },
     { icon: Mail, label: "Email", value: "hello@kalastudios.in" },
-    { icon: MapPin, label: "Location", value: "Mumbai, Maharashtra" },
+    { icon: MapPin, label: "Location", value: "Bhubaneshwar, Odisha" },
   ];
 
   return (
@@ -102,8 +102,8 @@ const Contact = () => {
                   <CardContent className="p-6 space-y-6">
                     {contactInfo.map((info, index) => (
                       <div key={index} className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center flex-shrink-0">
-                          <info.icon className="w-6 h-6 text-primary-foreground" />
+                        <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                          <info.icon className="w-6 h-6 text-primary" />
                         </div>
                         <div>
                           <p className="font-semibold text-foreground mb-1">{info.label}</p>
@@ -121,14 +121,14 @@ const Contact = () => {
                       <Button
                         variant="secondary"
                         size="icon"
-                        className="rounded-full w-10 h-10 transition-smooth hover:scale-110"
+                        className="rounded-full w-10 h-10 transition-smooth hover:scale-110 bg-white"
                       >
                         <Instagram className="w-5 h-5" />
                       </Button>
                       <Button
                         variant="secondary"
                         size="icon"
-                        className="rounded-full w-10 h-10 transition-smooth hover:scale-110"
+                        className="rounded-full w-10 h-10 transition-smooth hover:scale-110 bg-white"
                       >
                         <Facebook className="w-5 h-5" />
                       </Button>

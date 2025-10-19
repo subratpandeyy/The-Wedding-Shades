@@ -37,11 +37,11 @@ const About = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-background p-8 rounded-lg shadow-soft hover:shadow-elegant transition-smooth animate-fade-in-up text-center"
+              className="bg-background p-2 rounded-lg shadow-soft hover:shadow-elegant transition-smooth animate-fade-in-up text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-                <feature.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="w-16 h-16 mx-auto mb-2 flex items-center justify-center">
+                <feature.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
