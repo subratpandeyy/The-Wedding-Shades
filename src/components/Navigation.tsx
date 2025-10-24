@@ -24,12 +24,11 @@ const Navigation = () => {
     { name: 'Services', id: 'services' },
     { name: 'Portfolio', id: 'portfolio' },
     { name: 'Testimonials', id: 'testimonials' },
-    { name: 'Contact', id: 'contact' },
   ];
 
   return (
     <nav
-  className={`fixed left-0 right-0 z-50 mx-auto rounded-3xl
+  className={`fixed left-0 right-0 z-50 mx-auto rounded-full
     transition-[background-color,backdrop-filter,box-shadow,margin,max-width]
     duration-700 ease-out
     ${isScrolled
